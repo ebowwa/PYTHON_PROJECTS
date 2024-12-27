@@ -1,0 +1,3 @@
+[submodule "public/Solar-Com-Ops"]
+	path = public/Solar-Com-Ops
+	url = https://github.com/ebowwa/Solar-Com-Ops.git
