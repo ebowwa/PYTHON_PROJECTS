@@ -1,0 +1,174 @@
+openapi: 3.0.0
+info:
+  title: Internet Tools API
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:6002'
+paths:
+  /:
+    get:
+      summary: Hello World
+      responses:
+        '200':
+          description: A welcome message.
+  /openapi.yaml:
+    get:
+      summary: Get OpenAPI Specification
+      responses:
+        '200':
+          description: Returns the OpenAPI specification.
+  /web_search:
+    post:
+      summary: Web Search
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WebSearchRequest'
+      responses:
+        '200':
+          description: Returns a list of search results.
+  /generate_queries:
+    post:
+      summary: Generate Queries
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateQueriesRequest'
+      responses:
+        '200':
+          description: Returns a list of generated queries.
+  /fetch_web_page:
+    post:
+      summary: Fetch Web Page
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FetchWebPageRequest'
+      responses:
+        '200':
+          description: Returns the content of a web page.
+  /get_all_links:
+    post:
+      summary: Get All Links
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetAllLinksRequest'
+      responses:
+        '200':
+          description: Returns a list of all links from a web page.
+  /get_all_files:
+    post:
+      summary: Get All Files
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetAllFilesRequest'
+      responses:
+        '200':
+          description: Returns a list of all files from a web page.
+  /extract_text:
+    post:
+      summary: Extract Text
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Returns the extracted text from a PDF file.
+  /download_process_pdf:
+    post:
+      summary: Download and Process PDF
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  format: uri
+      responses:
+        '200':
+          description: Returns the extracted text from a downloaded PDF file.
+components:
+  schemas:
+    WebSearchRequest:
+      type: object
+      properties:
+        query:
+          type: string
+    WebSearchResponse:
+      type: object
+      properties:
+        results:
+          type: array
+          items:
+            type: string
+    GenerateQueriesRequest:
+      type: object
+      properties:
+        base_query:
+          type: string
+    GenerateQueriesResponse:
+      type: object
+      properties:
+        queries:
+          type: array
+          items:
+            type: string
+    FetchWebPageRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+    FetchWebPageResponse:
+      type: object
+      properties:
+        content:
+          type: string
+    GetAllLinksRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+    GetAllLinksResponse:
+      type: object
+      properties:
+        links:
+          type: array
+          items:
+            type: string
+    GetAllFilesRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+    GetAllFilesResponse:
+      type: object
+      properties:
+        files:
+          type: array
+          items:
+            type: string

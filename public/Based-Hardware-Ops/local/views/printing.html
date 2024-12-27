@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Printing Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Label Printing Interface</h1>
+    <form id="printForm">
+        <label for="labelDir">Label Directory:</label>
+        <input type="text" id="labelDir" name="labelDir" value="/Users/ebowwa/Based-Hardware/shipping/2">
+        
+        <label for="printer">Printer Name:</label>
+        <input type="text" id="printer" name="printer" value="MUNBYN_ITPP941AP">
+        
+        <label for="mediaSize">Media Size:</label>
+        <input type="text" id="mediaSize" name="mediaSize" value="4x6">
+        
+        <button type="submit">Print Labels</button>
+    </form>
+    
+    <div id="status"></div>
+
+    <script>
+        document.getElementById('printForm').onsubmit = function(e) {
+            e.preventDefault();
+            var status = document.getElementById('status');
+            status.style.display = 'block';
+            status.innerHTML = 'Printing labels...';
+
+            var formData = new FormData(this);
+            fetch('/print', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                status.innerHTML = data;
+            })
+            .catch(error => {
+                status.innerHTML = 'Error: ' + error;
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+language = "python3"
+entrypoint = "app.py"
+run = "uvicorn app:app --reload"
+modules = ["python-3.10:v25-20230920-d4ad2e4"]

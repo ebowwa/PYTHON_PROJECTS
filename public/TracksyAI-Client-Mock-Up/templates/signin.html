@@ -1,0 +1,512 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+  	
+
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <script src="js/audio.js?t=1687494798941"></script>
+  	<link rel="stylesheet" href="css/style.css?t=1687494798941" type="text/css" />
+  	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  	<link rel="stylesheet" href="/lib/jquery-toast/jquery.toast.min.css" type="text/css" media="all" />
+  	
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Tracksy - Worlds Leading AI Music Generator</title>
+    <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-74HL85452R"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-74HL85452R');
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="/lib/jquery-toast/jquery.toast.min.js"></script>
+
+
+  	<script src="/lib/vue/vue.min.js"></script>
+  	
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  	
+  	
+  	
+	<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+
+  	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+
+  	<script>
+  	    var authDomainOrig = "test-project-311421.firebaseapp.com"
+		var authDomainTest = "www.dawbot.com"
+		var authDomainTest2 = "tracksy.ai"
+		var authDomainTest3 = "auth.tracksy.ai"
+  		var config = {
+    		apiKey: "AIzaSyC7imMwlybVCjMvhwAeeZLcL4LI2fjJo5s",
+    		authDomain: authDomainTest3,
+  		};
+  		firebase.initializeApp(config);
+  	</script>
+ 
+ 
+ 
+
+
+
+
+<!-- start Mixpanel init -->
+
+<script type="text/javascript">
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+
+// Enabling the debug mode flag is useful during implementation,
+// but it's recommended you remove it for production
+mixpanel.init("2073404dbfe82b48fd42bf97321e30f1", {loaded: function(mixpanel){mixpanel_distinct_id=mixpanel.get_distinct_id();}});let mixpanel_distinct_id;
+</script>
+
+<!-- end Mixpanel init -->
+
+
+
+<!-- start Mixpanel Super Properties -->
+<script type="text/javascript">
+
+	mixpanel.register({
+		'Email': 'n/a',
+		'UserId': 'n/a',
+		'Plan': 'n/a'
+	});
+
+
+
+mixpanel.identify()
+</script>
+<!-- end Mixpanel Super Properties -->
+
+
+
+  </head>
+  <body>
+  
+	
+
+
+
+
+
+
+
+
+
+<header class="sticky top-0 shadow-sm !z-max" style="z-index:10000; background-color: rgb(17, 17, 17); color: rgb(255, 255, 255);">
+
+<nav id="navbarApp" class="navbar">
+	<div @click='goToHome' class="brand-title">Tracksy</div>
+	<a href="#" class="toggle-button">
+	<svg viewBox='0 0 10 8' width='40'>
+					  <path d='M1 1h8M1 4h 8M1 7h8' 
+					        stroke='#FFFFFF' 
+					        stroke-width='2' 
+					        stroke-linecap='round'/>
+					</svg>
+	</a>
+	<div v-if="isLoggedIn" class="navbar-links">
+		<ul>
+			<li>
+				<button class="topnav_button" :class="classObject('createtrack')" onclick="location.href='/createtrack'">Create</button>
+			</li>
+			<li>
+				<button class="topnav_button" :class="classObject('library')"  onclick="location.href='/library'">Library</button>
+			</li>
+			<li>
+				<div class="dropdown">
+					<button class="accountButton" onclick="myFunction()" xclass="dropbtn">
+						<span id="accountIcon" class="material-icons">
+							person
+		  				</span>
+	  				</button>
+					
+					  <div id="accountDropdown" class="dropdown-content">
+					  <span class="welcomeMessage">Welcome!&nbsp;&nbsp;{{ userEmail }}</span>
+					    <a href="#" @click='signOut'>Sign Out</a>
+					  </div>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div v-else class="navbar-links">
+		<ul>
+			<li>
+				<button class="topnav_button" onclick="location.href='/signin'">Sign In</button>
+			</li>
+			<li>
+				<button class="topnav_button" onclick="location.href='/signup'">Sign Up</button>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+</header>
+
+<script>
+
+
+
+var navbarApp = new Vue({
+    el: '#navbarApp',
+    data: {
+        isLoggedIn: false,
+        userEmail:'null',
+	    uid: 'null',
+	    atk: 'null',
+        windowhref: window.location.href,
+        showMobileMenu: false
+    },
+    methods: {
+    	signOut: function() {
+    		firebase.auth().signOut()
+    		window.location.href = "/processSignout"
+//		     if (typeof homepageApp !== 'undefined') {
+//		    	  homepageApp.isLoggedIn = false;
+//		      }
+    	},
+    	goToHome: function() {
+    		window.location.href = "/"
+    	},
+    	classObject: function(testcheck) {
+    		if (this.windowhref.includes(testcheck)) {
+    			return 'active'
+    		}
+    	},
+        isMobile() {
+    		console.log("In isMobile - screen width - " + window.innerWidth)
+            if( window.innerWidth <= 760 ) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        },
+        showMenu() {
+        	this.showMobileMenu = !this.showMobileMenu;
+        	}
+    },
+    computed: {
+
+    }
+});
+
+$(".toggle-button").on("click", function() {
+	console.log("In toggle button")
+	$(".navbar-links").toggleClass('active')
+});
+
+
+</script>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("accountDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+	console.log(event.target)
+	console.log(event.target.id)
+//  if (!event.target.matches('accountIcon')) {
+	  if (event.target.id != 'accountIcon') {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+$('.button_replace').click(function() {
+	console.log("In button_replace click")
+	document.getElementById("myDropdown").classList.toggle("show");
+})
+
+</script>
+
+
+  	<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 120vh;">
+	  	
+	  			<div>
+			<div class="homepage_container">
+				<div class="homepage_container_2">
+					<div class="homepage_container_video">
+						<video width="100%" height="100%" autoplay loop muted playsinline poster="/images/dawbot_woman_headphones.png" src="/images/dawbot_woman_headphones_small.mp4">
+  							<source src="/images/dawbot_woman_headphones_small.mp4" type="video/mp4">
+						</video>
+						<div class="absolute inset-0" style="z-index:100; background-color: rgba(0, 0, 0, .49);"></div>
+					</div>
+					<div class="homepage_container_text signin">
+						<div class="homepage_container_text_2">
+							<div class="homepage_container_text_3">
+								<div class="homepage_container_text_content">
+									<h1 class="homepage_container_text_content_header">Please sign in</h1>
+									<div>
+
+									  <div class="form-group">
+									    <label for="email">Email address</label>
+									    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+									  </div>
+									  <div class="form-group">
+									    <label for="password">Password</label>
+									    <input type="password" class="form-control" id="password" placeholder="Password">
+									  </div>
+									  <div id="errorMessage">
+									  	<br>
+									  	<div id="errorText"></div>
+									  </div>
+									  <br>
+									  <button class="topnav_button" onclick="signIn()" class="btn btn-primary">Sign In</button>
+									  <br>
+									  <a href="#" onclick="resetPassword()">Forgot Password</a>
+									  <div class="signup-line">
+									  	<span class="line"></span>
+									  	<span class="ortext">OR</span>
+									  	<span class="line"></span>
+									  </div>
+									  <br>
+									  		<button onclick="signInWithGoogle()" class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised firebaseui-idp-google firebaseui-id-idp-button" data-provider-id="google.com" style="background-color:#ffffff" data-upgraded=",MaterialButton">
+									  			<span class="firebaseui-idp-icon-wrapper">
+									  				<img class="firebaseui-idp-icon" alt="" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg">
+									  			</span>
+									  			<span class="firebaseui-idp-text firebaseui-idp-text-long">Sign In with Google</span>
+									  			<span class="firebaseui-idp-text firebaseui-idp-text-short">Google</span>
+									  		</button>
+									  <br><br><br>
+									  By signing in, you agree to Tracksy's <a class="toulink" href="/termsofuse.jsp" target="_new">Terms of Use</a>
+									  <br>
+									  <a xstyle="color:black" href="signup">New User - Sign Up</a>
+									  
+
+									 </div>
+									<div xid="firebaseui-auth-container"></div>
+    
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		    <div class="card-body text-center" id="wpdm-audio-player">
+    
+    <div id="discardSaveButtons" class="discardSaveButtons">
+    	<button id="discardTrack">Discard</button>
+    	<button id="saveTrack">Save</button>
+    </div>
+     <div class="media">
+
+		<div id="aWrap">
+			
+			<div class="audioplayertitle">
+				<h5 id="audioplayerTrackDisplayName" class="trackName"></h5>
+			</div>
+			
+			<div class="audioplayercontrols">
+				  <!-- (B) PLAY/PAUSE BUTTON -->
+				  <div>
+				  <button id="aPrev">
+				  	<span id="aPrevIco" class="material-icons">
+				    	skip_previous
+				  	</span>
+				  </button>
+				  <button id="aPlay">
+				  	<span id="aPlayIco" class="material-icons">
+				    	play_arrow
+				  	</span>
+				  </button>
+				  <button id="aNext">
+				  	<span id="aNextIco" class="material-icons">
+				    	skip_next
+				  	</span>
+				  </button>
+				 </div>
+				  <!-- (C) TIME -->
+				 
+				  <!-- (D) SEEK BAR -->
+
+				 	<span id="aNow"></span><input id="aSeek" xclass="roundedInputText" type="range" min="0" value="0" step="1"/><span id="aTime"></span>
+			</div>
+			
+			<div class="audioplayervolume">
+			  <!-- (E) VOLUME SLIDE -->
+			  <span id="aVolIco" class="material-icons">volume_up</span>
+			  <input id="aVolume" type="range" min="0" max="1" value="0.3" step="0.1"/>
+			</div>		
+		</div>
+
+      </div>
+    </div>
+
+		
+  
+	  			<div class="footer">
+			<div class="footer_2">
+				<div class="footer_2_main">
+					<div>© 2023 Tracksy | Worlds Leading AI Music Generator</div>
+					<div><a class="contactlink" href="/termsofuse">Terms of Use</a>  |  Please contact us at <a href="mailto:hello@tracksy.ai" class="contactLink">hello@tracksy.ai</a></div>
+				</div>
+			</div>
+		</div>
+    
+	
+	</div>
+	
+
+	<script>
+	
+////	const auth = firebase.auth();
+	
+	function signUp() {
+		var email = document.getElementById("email")
+		var password = document.getElementById("password")
+		const promise = auth.createUserWithEmailAndPassword(email.value,password.value)
+		promise.catch(e=>alert(e.message));
+		alert("Sign Up success")
+	}
+	
+	function signIn() {
+		$('#errorText').html("")
+        $('#errorMessage').hide()
+		$('#myModal').show();
+		var email = document.getElementById("email")
+		var password = document.getElementById("password")
+		console.log("In signIn - email - " + email + "   password - " + password)
+////		const promise = auth.signInWithEmailAndPassword(email.value,password.value)
+////		promise.catch(e=>alert(e.message));
+////		alert("Sign In success")
+
+		firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+		  .then(function(result) {
+				mixpanel.track('Sign In', {
+					'Sign In Type': "Email",
+					'Email': result.user.email,
+					'Plan': "Free"
+	  			});
+  			  window.location = "/processSignin?email=" + result.user.email + "&uid=" + result.user.uid + "&atk=" + result.user.auth.currentUser.accessToken
+		  }).catch(function(error) {
+			  //console.log(error)
+//			  $('#errorText').html(error.message)
+			  $('#myModal').hide();
+			  $('#errorText').html("Invalid email/password")
+			  $('#errorMessage').show()
+		  });
+	}
+
+	
+	function signInWithGoogle() {
+		console.log("In signInWithGoogle")
+		const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+		firebase.auth().signInWithPopup(googleProvider)
+//		firebase.auth().signInWithRedirect(googleProvider)
+		.then(function(result) {
+			mixpanel.track('Sign In', {
+				'Sign In Type': "Google",
+				'Email': result.user.email,
+				'Plan': "Free"
+  			});
+
+			  window.location = "/processSignin?email=" + result.user.email + "&uid=" + result.user.uid + "&atk=" + result.user.auth.currentUser.accessToken
+		}).catch(function(error) {
+			let errorMessage = error.message.replace('Firebase: ','')
+			console.log("In error - errorMessage - " + errorMessage)
+			$('#errorText').html(errorMessage)
+			$('#errorMessage').show()
+		});
+	}
+	
+	function resetPassword() {
+		$('#errorText').html("")
+        $('#errorMessage').hide()
+
+		var email = document.getElementById("email").value
+		console.log("Email to reset - " + email)
+		firebase.auth().sendPasswordResetEmail(email)
+		.then(function(result) {
+			$.toast({
+			    heading: 'Information',
+			    text: 'Reset Password Email Sent',
+			    icon: 'info',
+			    loader: true,        // Change it to false to disable loader
+			    loaderBg: '#9EC600'  // To change the background
+			})
+
+		}).catch(function(error) {
+			let errorMessage = error.message.replace('Firebase: ','')
+			$('#errorText').html(errorMessage)
+			$('#errorMessage').show()
+		})
+	}
+	
+	function signOut() {
+		auth.signOut()
+		console.log("Sign Out success")
+	}
+
+	firebase.auth().onAuthStateChanged((user)=>{
+		if (user) {
+			var email = user.email
+//			alert("Active user - " + email)
+		} else {
+//			alert("No Active user found")
+		}
+	});
+			
+	</script>
+	
+	
+<!-- Begin - The Modal -->
+	<div id="myModal" class="modal">
+	
+	  <!-- Modal content -->
+	  <div class="modal-content customModal">
+	  	<p class="progressBarHeader">Signing in to Tracksy!</p>
+	    <div class="statusMessage" id="statusMessage"></div>
+	    <br/>
+	    <div class="loader"></div>
+	  </div>
+	</div>
+<!-- End - The Modal -->
+	
+  </body>
+</html>

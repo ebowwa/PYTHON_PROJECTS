@@ -1,0 +1,33 @@
+{
+    "name": "Insert_Name_Here",
+    "contact_info": {
+        "email": "example@email.com",
+        "phone": "123-456-7890",
+        "linkedin": "linkedin.com/in/example"
+    },
+    "summary": "A brief summary of your background and qualifications.",
+    "experiences": [
+        {
+            "title": "Job Title",
+            "company": "Company Name",
+            "location": "City, State",
+            "dates": "Start Date - End Date",
+            "description": "Describe your responsibilities and achievements in this role."
+        }
+    ],
+    "skills": {
+        "skill_1": "Skill 1",
+        "skill_2": "Skill 2",
+        "skill_3": "Skill 3"
+    },
+    "education": [
+        {
+            "institution": "University Name",
+            "degree": "Degree Name"
+        },
+        {
+            "institution": "School Name",
+            "description": "Additional educational information."
+        }
+    ]
+}

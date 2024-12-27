@@ -1,0 +1,8 @@
+fastapi
+# requests if flask 
+# pip install 
+fastapi[all] 
+httpx
+uvicorn
+pydantic
+

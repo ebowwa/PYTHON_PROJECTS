@@ -1,0 +1,684 @@
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+  		
+
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <script src="js/audio.js?t=1687489958546"></script>
+  	<link rel="stylesheet" href="css/style.css?t=1687489958546" type="text/css" />
+  	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  	<link rel="stylesheet" href="/lib/jquery-toast/jquery.toast.min.css" type="text/css" media="all" />
+  	
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Tracksy - Worlds Leading AI Music Generator</title>
+    <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-74HL85452R"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-74HL85452R');
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="/lib/jquery-toast/jquery.toast.min.js"></script>
+
+
+  	<script src="/lib/vue/vue.min.js"></script>
+  	
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  	
+  	
+  	
+	<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+
+  	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+
+  	<script>
+  	    var authDomainOrig = "test-project-311421.firebaseapp.com"
+		var authDomainTest = "www.dawbot.com"
+		var authDomainTest2 = "tracksy.ai"
+		var authDomainTest3 = "auth.tracksy.ai"
+  		var config = {
+    		apiKey: "AIzaSyC7imMwlybVCjMvhwAeeZLcL4LI2fjJo5s",
+    		authDomain: authDomainTest3,
+  		};
+  		firebase.initializeApp(config);
+  	</script>
+ 
+ 
+ 
+
+
+
+
+<!-- start Mixpanel init -->
+
+<script type="text/javascript">
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+
+// Enabling the debug mode flag is useful during implementation,
+// but it's recommended you remove it for production
+mixpanel.init("2073404dbfe82b48fd42bf97321e30f1", {loaded: function(mixpanel){mixpanel_distinct_id=mixpanel.get_distinct_id();}});let mixpanel_distinct_id;
+</script>
+
+<!-- end Mixpanel init -->
+
+
+
+<!-- start Mixpanel Super Properties -->
+<script type="text/javascript">
+
+	mixpanel.register({
+		'Email': 'ec.arbee1@gmail.com',
+		'UserId': 'tyCoLAz3CLd5Trj5ijbsd7HotOG3',
+		'Plan': 'Free'
+	});
+
+
+mixpanel.identify()
+</script>
+<!-- end Mixpanel Super Properties -->
+
+
+	</head>
+	<body>
+	
+	  	
+
+
+
+
+
+
+
+
+
+<header class="sticky top-0 shadow-sm !z-max" style="z-index:10000; background-color: rgb(17, 17, 17); color: rgb(255, 255, 255);">
+
+<nav id="navbarApp" class="navbar">
+	<div @click='goToHome' class="brand-title">Tracksy</div>
+	<a href="#" class="toggle-button">
+	<svg viewBox='0 0 10 8' width='40'>
+					  <path d='M1 1h8M1 4h 8M1 7h8' 
+					        stroke='#FFFFFF' 
+					        stroke-width='2' 
+					        stroke-linecap='round'/>
+					</svg>
+	</a>
+	<div v-if="isLoggedIn" class="navbar-links">
+		<ul>
+			<li>
+				<button class="topnav_button" :class="classObject('createtrack')" onclick="location.href='/createtrack'">Create</button>
+			</li>
+			<li>
+				<button class="topnav_button" :class="classObject('library')"  onclick="location.href='/library'">Library</button>
+			</li>
+			<li>
+				<div class="dropdown">
+					<button class="accountButton" onclick="myFunction()" xclass="dropbtn">
+						<span id="accountIcon" class="material-icons">
+							person
+		  				</span>
+	  				</button>
+					
+					  <div id="accountDropdown" class="dropdown-content">
+					  <span class="welcomeMessage">Welcome!&nbsp;&nbsp;{{ userEmail }}</span>
+					    <a href="#" @click='signOut'>Sign Out</a>
+					  </div>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div v-else class="navbar-links">
+		<ul>
+			<li>
+				<button class="topnav_button" onclick="location.href='/signin'">Sign In</button>
+			</li>
+			<li>
+				<button class="topnav_button" onclick="location.href='/signup'">Sign Up</button>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+</header>
+
+<script>
+
+
+
+var navbarApp = new Vue({
+    el: '#navbarApp',
+    data: {
+        isLoggedIn: true,
+        userEmail:'ec.arbee1@gmail.com',
+	    uid: 'tyCoLAz3CLd5Trj5ijbsd7HotOG3',
+	    atk: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMDNhZTdmNDczZjJjNmIyNTI3NmMwNjM2MGViOTk4ODdlMjNhYTkiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRWxpamFoIEFyYmVlIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBY0hUdGUyYkZocWNwTnllZTJYNXl2SUhlUlZINkNQSXFSc2pUZnZxS0VCVms0PXM5Ni1jIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL3Rlc3QtcHJvamVjdC0zMTE0MjEiLCJhdWQiOiJ0ZXN0LXByb2plY3QtMzExNDIxIiwiYXV0aF90aW1lIjoxNjg3NDg5ODQ5LCJ1c2VyX2lkIjoidHlDb0xBejNDTGQ1VHJqNWlqYnNkN0hvdE9HMyIsInN1YiI6InR5Q29MQXozQ0xkNVRyajVpamJzZDdIb3RPRzMiLCJpYXQiOjE2ODc0ODk4NDksImV4cCI6MTY4NzQ5MzQ0OSwiZW1haWwiOiJlYy5hcmJlZTFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDk2OTczMDE1OTU2MTM2ODE2ODMiXSwiZW1haWwiOlsiZWMuYXJiZWUxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.TG29O975Of2GDppnvJ0AFZo4IOZHNZIk1IAr2S27NI923lRUyg2vEtZpv9I06IXQPDM2sSRkZsaEtG87ByUiVbwKIxKd5VneqEpjXcR3YmR3iqESGQyeIhcnFXEvJxdfkwqNhqKJFXc0Y7iCLXKHDIsijFTyG8zaoovCD3t_de5Ma2x7jk7DwLWF6FZ_hx6FYsB9e9IKJ_R21dLZGcW8GNJVB5OAkH_DemQVbiHKz74T9MKsJrvOK3wUfiNLgLMW-jJxOvTvINVvts2TC7a70nzu93Oq5Vdk3SydwxjeF93TRw15bq2mnNLQZauHhJ-NZzLfj2d6hi81Xax6YQAhtQ',
+        windowhref: window.location.href,
+        showMobileMenu: false
+    },
+    methods: {
+    	signOut: function() {
+    		firebase.auth().signOut()
+    		window.location.href = "/processSignout"
+//		     if (typeof homepageApp !== 'undefined') {
+//		    	  homepageApp.isLoggedIn = false;
+//		      }
+    	},
+    	goToHome: function() {
+    		window.location.href = "/"
+    	},
+    	classObject: function(testcheck) {
+    		if (this.windowhref.includes(testcheck)) {
+    			return 'active'
+    		}
+    	},
+        isMobile() {
+    		console.log("In isMobile - screen width - " + window.innerWidth)
+            if( window.innerWidth <= 760 ) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        },
+        showMenu() {
+        	this.showMobileMenu = !this.showMobileMenu;
+        	}
+    },
+    computed: {
+
+    }
+});
+
+$(".toggle-button").on("click", function() {
+	console.log("In toggle button")
+	$(".navbar-links").toggleClass('active')
+});
+
+
+</script>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("accountDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+	console.log(event.target)
+	console.log(event.target.id)
+//  if (!event.target.matches('accountIcon')) {
+	  if (event.target.id != 'accountIcon') {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+$('.button_replace').click(function() {
+	console.log("In button_replace click")
+	document.getElementById("myDropdown").classList.toggle("show");
+})
+
+</script>
+
+
+	<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 120vh;">
+	  	
+	  	   	<p id="createTrackHeader" class="header">Create Your Track.</p>
+	  	
+	  	
+<div class="row rowWidth">
+<div class="col-md-4 center createTrackButtons">
+	<h3>1. Genre or Mood</h3>
+    <div class="btn-group">
+        <button id="allGenresButton" type="button" class="dropdown-toggle buttoncreate" data-bs-toggle="dropdown">Select Genre...</button>
+		<div id="allGenres" class="dropdown-menu allItems">
+						<a class="dropdown-header">Genres</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Ambient" data-value="6.5">Ambient</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Bass" data-value="6.10">Bass</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Breakbeat" data-value="6.11">Breakbeat</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Chill" data-value="6.3">Chill</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Classical" data-value="6.17">Classical</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Disco" data-value="6.13">Disco</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Drumnbass" data-value="6.8">Drumnbass</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Dub" data-value="6.9">Dub</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="EDM" data-value="6.0">EDM</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Folk" data-value="6.18">Folk</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Electronica" data-value="6.6">Electronica</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Hiphop" data-value="6.4">Hiphop</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="House" data-value="6.1">House</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Jazz & Funk" data-value="6.12">Jazz & Funk</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Pop" data-value="6.15">Pop</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Rock & Metal" data-value="6.16">Rock & Metal</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Techno" data-value="6.2">Techno</a>
+			<a href="#" class="dropdown-item" data-category="Genres" data-group="Trance" data-value="6.7">Trance</a>
+			<a class="dropdown-header">Moods</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Beautiful" data-value="0.5">Beautiful</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Calm" data-value="0.0">Calm</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Dreamy" data-value="0.7">Dreamy</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Energizing" data-value="0.1">Energizing</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Erotic" data-value="0.6">Erotic</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Heroic" data-value="0.8">Heroic</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Joyful" data-value="0.2">Joyful</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Sad" data-value="0.3">Sad</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Scary" data-value="0.10">Scary</a>
+			<a href="#" class="dropdown-item" data-category="Moods" data-group="Tense" data-value="0.4">Tense</a>
+
+		</div>
+    </div>
+</div>
+
+
+
+</br>
+<div class="col-md-4 center createTrackButtons">
+	<h3>2. Length</h3>
+    <div class="btn-group">
+        <button id="allDurationsButton" type="button" class="buttoncreate dropdown-toggle" data-bs-toggle="dropdown">Select Length...</button>
+        <div id="allDurations" class="dropdown-menu allItems">
+            <a href="#" class="dropdown-item" data-value="15">00:15</a>
+            <a href="#" class="dropdown-item" data-value="30">00:30</a>
+            <a href="#" class="dropdown-item" data-value="45">00:45</a>
+            <a href="#" class="dropdown-item" data-value="60">01:00</a>
+            <a href="#" class="dropdown-item" data-value="75">01:15</a>
+            <a href="#" class="dropdown-item" data-value="90">01:30</a>
+            <a href="#" class="dropdown-item" data-value="105">01:45</a>
+            <a href="#" class="dropdown-item" data-value="120">02:00</a>
+            <a href="#" class="dropdown-item" data-value="135">02:15</a>
+            <a href="#" class="dropdown-item" data-value="150">02:30</a>
+            <a href="#" class="dropdown-item" data-value="165">02:45</a>
+            <a href="#" class="dropdown-item" data-value="180">03:00</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 center createTrackButtons">
+	<h3>3. Create My Track!</h3>
+	<button href="#" id="createTrackButton" name="createTrackButton" class="buttoncreate">Create My Track</button>
+</div>
+
+
+</div>
+
+<div class="errorCreateMessage" id="errorOnCreate" style="text-align: center">
+  We're experiencing high demand.  Please try again.
+</div>
+
+<div id="createTrackApp" class="container">
+</div>
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+
+	    <div class="card-body text-center" id="wpdm-audio-player">
+    
+    <div id="discardSaveButtons" class="discardSaveButtons">
+    	<button id="discardTrack">Discard</button>
+    	<button id="saveTrack">Save</button>
+    </div>
+     <div class="media">
+
+		<div id="aWrap">
+			
+			<div class="audioplayertitle">
+				<h5 id="audioplayerTrackDisplayName" class="trackName"></h5>
+			</div>
+			
+			<div class="audioplayercontrols">
+				  <!-- (B) PLAY/PAUSE BUTTON -->
+				  <div>
+				  <button id="aPrev">
+				  	<span id="aPrevIco" class="material-icons">
+				    	skip_previous
+				  	</span>
+				  </button>
+				  <button id="aPlay">
+				  	<span id="aPlayIco" class="material-icons">
+				    	play_arrow
+				  	</span>
+				  </button>
+				  <button id="aNext">
+				  	<span id="aNextIco" class="material-icons">
+				    	skip_next
+				  	</span>
+				  </button>
+				 </div>
+				  <!-- (C) TIME -->
+				 
+				  <!-- (D) SEEK BAR -->
+
+				 	<span id="aNow"></span><input id="aSeek" xclass="roundedInputText" type="range" min="0" value="0" step="1"/><span id="aTime"></span>
+			</div>
+			
+			<div class="audioplayervolume">
+			  <!-- (E) VOLUME SLIDE -->
+			  <span id="aVolIco" class="material-icons">volume_up</span>
+			  <input id="aVolume" type="range" min="0" max="1" value="0.3" step="0.1"/>
+			</div>		
+		</div>
+
+      </div>
+    </div>
+
+
+	  			<div class="footer">
+			<div class="footer_2">
+				<div class="footer_2_main">
+					<div>© 2023 Tracksy | Worlds Leading AI Music Generator</div>
+					<div><a class="contactlink" href="/termsofuse">Terms of Use</a>  |  Please contact us at <a href="mailto:hello@tracksy.ai" class="contactLink">hello@tracksy.ai</a></div>
+				</div>
+			</div>
+		</div>
+    
+</div>
+
+
+
+
+<script>
+
+$(document).ready(function(){
+    $("#genres a").click(function(){
+//    	console.log($(this).text())
+//        $("#btn_baud").text($(this).text());
+    });
+});
+
+$(document).ready(function(){
+    $("#allGenres a.dropdown-item").click(function(){
+    	var selectedGenre = $(this).data('category') + " : " + $(this).data('group')
+    	$('#allGenresButton').html(selectedGenre)
+    	$('#allGenresButton').data('value',$(this).data('value'))
+    	$('#allGenresButton').data('category',$(this).data('category'))
+    	$('#allGenresButton').data('group',$(this).data('group'))
+    });
+});
+
+$(document).ready(function(){
+    $("#allDurations a").click(function(){
+    	var duration = $(this).text()
+    	$('#allDurationsButton').html(duration)
+    	$('#allDurationsButton').data('value',$(this).data('value'))
+    });
+
+    
+	// Get the modal
+//	var modal = document.getElementById("myModal");
+	// Get the <span> element that closes the modal
+//	var span = document.getElementsByClassName("close")[0];
+
+    
+    $("#createTrackButton").click(function(e) {
+        e.preventDefault();
+        
+        $('#errorOnCreate').hide()
+        
+        var selectedGenre = $('#allGenresButton').data('value')
+
+        let genresormoods = $('#allGenresButton').data('category')
+        let group = $('#allGenresButton').data('group')
+        
+        if (selectedGenre == null) {
+        	alert("Please select a genre or mood before continuing.")
+        	return
+        }
+//        console.log(selectedGenre)
+        var duration = $('#allDurationsButton').data('value')
+        if (duration == null) {
+        	alert("Please select a duration before continuing.")
+        	return
+        }
+        
+        // Send MixPanel
+        mixpanel.track('Create My Track', {
+		  'GenresOrMoods': genresormoods,
+		  'Type': group,
+		  'Playlist Index': selectedGenre,
+		  'Length': duration
+		});
+		// Done sending MixPanel
+		
+        $('#myModal').show();
+//	    var audio = $("#player");  
+//	    audio[0].pause();
+//	    audio.hide();
+	    
+//        console.log(duration)
+        $.ajax({
+          type: "POST",
+          url: "/api/createtrackapi",
+//          data: JSON.stringify({playlist: selectedGenre, duration: duration, uid: navbarApp.uid, atk: navbarApp.atk}),
+          data: JSON.stringify({playlist: selectedGenre, duration: duration, uid: navbarApp.uid, atk: navbarApp.atk}),
+          success: function(result) {
+        	  console.log("In success - result: " + result.success);
+        	  if (result.success) {
+        		  changeTrack(result.trackId, result.trackURL, result.trackDisplayName)
+        	  } else {
+        	        // Send MixPanel
+        	        mixpanel.track('Create My Track - Error', {
+        			  'error': result.error,
+        			  'mubertTaskId': result.mubertTaskId
+        			});
+        			// Done sending MixPanel
+
+            	  $('#player').hide()
+            	  $('#errorOnCreate').show()
+            	  $('#myModal').hide();
+        	  }
+//        	  console.log(result.trackURL)
+//        	  createAudioPlayer(result.trackURL)
+//        	  createAudioPlayer("https://static.gcp.mubert.com/b2b/recorder/dawbot/9d5edc95ca134ea9b933fdf3ef2c2117.mp3")
+			  
+          },
+          error: function(result) {
+        	  $('#player').hide()
+        	  $('#errorOnCreate').show()
+        	  $('#myModal').hide();
+          }
+        });
+      });
+
+    
+    function saveTrack() {
+    	alert("In save Track");
+    }
+    
+});
+
+</script>
+
+
+	<script>
+
+		var createTrackApp = new Vue({
+    		el: '#createTrackApp',
+    		data: {
+        		trackId: '',
+    		},
+    		methods: {
+    			signOut: function() {
+    				firebase.auth().signOut()
+    			},
+    			saveTrack: function() {
+    		        let selectedGenre = $('#allGenresButton').data('value')
+    		        let genresormoods = $('#allGenresButton').data('category')
+    		        let group = $('#allGenresButton').data('group')
+					let duration = $('#allDurationsButton').data('value')
+					
+    		        // Send MixPanel for Discard
+    		        mixpanel.track('Save Track', {
+    				  'TrackId': createTrackApp.trackId,
+    				  'GenresOrMoods': genresormoods,
+    				  'Type': group,
+    				  'Playlist Index': selectedGenre,
+    				  'Length': duration
+    				});
+    				// Done sending MixPanel
+
+    		        $.ajax({
+    		            type: "POST",
+    		            url: "/api/savetrack.jsp",
+    		            data: JSON.stringify({uid: navbarApp.uid, atk: navbarApp.atk, trackId: createTrackApp.trackId}),
+    		            success: function(result) {
+//    		          	  console.log(result)
+//    		          	  window.location.href = "/library.jsp"
+    		    				$.toast({
+    		    				    heading: 'Information',
+    		    				    text: 'Saving your track to your Library',
+    		    				    icon: 'info',
+    		    				    loader: true,        // Change it to false to disable loader
+    		    				    loaderBg: '#9EC600'  // To change the background
+    		    				})
+
+    		            },
+    		            error: function(result) {
+    		          	  $('#player').hide()
+    		          	  $('#errorOnCreate').show()
+    		          	  $('#myModal').hide();
+    		            }
+    		          });
+
+    			},
+    			discardTrack: function() {
+    				
+    		        let selectedGenre = $('#allGenresButton').data('value')
+    		        let genresormoods = $('#allGenresButton').data('category')
+    		        let group = $('#allGenresButton').data('group')
+					let duration = $('#allDurationsButton').data('value')
+					
+    		        // Send MixPanel for Discard
+    		        mixpanel.track('Discard Track', {
+    				  'TrackId': createTrackApp.trackId,
+    				  'GenresOrMoods': genresormoods,
+    				  'Type': group,
+    				  'Playlist Index': selectedGenre,
+    				  'Length': duration
+    				});
+    				// Done sending MixPanel
+
+    				$("#createTrackButton").click()
+    			}    		
+    		}
+		});
+		
+		
+	</script>
+
+
+	<script>
+	
+	function createAudioPlayer(trackURL) {
+//		console.log("Inside createAudioPlayer - trackURL - " + trackURL)
+		var sound = document.createElement('audio');
+		sound.id = 'audio-player';
+		sound.controls = 'controls';
+		sound.src = trackURL;
+		sound.type = 'audio/mp3';
+		document.getElementById('track').appendChild(sound);
+	}
+	
+	function changeTrack(trackId, trackURL, displayName) {
+//		console.log("Inside changeTrack - trackURL - " + trackURL + "  trackName - " + trackName)
+//		$('#trackName').text(trackName)
+//	    var audio = $("#player");      
+//	    $("#mp3_src").attr("src", trackURL);
+	    /****************/
+//	    audio[0].pause();
+//	    audio[0].load();//suspends and restores all audio element
+
+	    //audio[0].play(); changed based on Sprachprofi's comment below
+//	    audio[0].oncanplaythrough = audio[0].play();
+	    /****************/
+        $('#myModal').hide();
+//	    audio.show()
+        createTrackApp.trackId = trackId
+	    changeAudioTrack(trackURL, displayName)
+        showDiscardSaveButtons()
+	}
+	
+	function startSpecificPage() {
+		$('#createButton').show();
+	}
+	
+	// Get the modal
+	var modal = document.getElementById("myModal");
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+
+	$("#titleLink").click(function() {
+		window.location = "/"
+	});
+
+	$("#createButton").click(function() {
+		window.location = "listentrack"
+	});
+
+	function goToListenTrack() {
+		window.location = "listentrack"
+	}
+
+	function startSpecificPage() {
+		$('#createTrackHeader').show();
+		$('.createTrackButtons').show();
+	}
+	
+	</script>
+	
+	
+	<!-- The Creating Modal -->
+	<div id="myModal" class="modal">
+	
+	  <!-- Modal content -->
+	  <div class="modal-content customModal">
+	    <p class="progressBarHeader">Creating Your Original Music!</p>
+	    <div class="statusMessage" id="statusMessage"></div>
+	    <br/>
+	    <div class="loader"></div>
+	  </div>
+	
+	</div>
+
+
+  </body>
+</html>

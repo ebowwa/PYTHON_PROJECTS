@@ -1,0 +1,6 @@
+email-validator
+flask
+flask-login
+flask-script
+flask-sqlalchemy
+pyjwt

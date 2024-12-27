@@ -1,0 +1,13 @@
+numpy==1.24.3
+Flask==2.2.2
+resemble
+python-dotenv
+openai
+pprint3x
+requests
+flask
+agentops
+certifi==2023.11.17 
+charset-normalizer==3.3.2
+idna==3.6
+urllib3==2.1.0

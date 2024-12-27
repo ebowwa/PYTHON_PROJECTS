@@ -1,0 +1,1 @@
+hackathon sponsored llm inference - **mistral ollama model only**

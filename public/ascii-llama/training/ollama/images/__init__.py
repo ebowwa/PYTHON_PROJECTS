@@ -1,0 +1,1 @@
+from .batch_descriptions.api import ImageDescriptionGenerator

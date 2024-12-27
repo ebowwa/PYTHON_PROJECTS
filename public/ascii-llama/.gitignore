@@ -1,0 +1,14 @@
+# Compiled Python files
+*.pyc
+__pycache__/
+llama_training/lib/python3.12/site-packages/certifi/cacert.pem
+.DS_Store
+node_modules
+pnpm-lock.yaml
+node_modules
+.next
+.venv
+.env
+/.env
+*.env
+my_venv

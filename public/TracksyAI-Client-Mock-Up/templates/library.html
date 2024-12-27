@@ -1,0 +1,703 @@
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+  		
+
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <script src="js/audio.js?t=1687492841492"></script>
+  	<link rel="stylesheet" href="css/style.css?t=1687492841492" type="text/css" />
+  	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  	<link rel="stylesheet" href="/lib/jquery-toast/jquery.toast.min.css" type="text/css" media="all" />
+  	
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Tracksy - Worlds Leading AI Music Generator</title>
+    <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-74HL85452R"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-74HL85452R');
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="/lib/jquery-toast/jquery.toast.min.js"></script>
+
+
+  	<script src="/lib/vue/vue.min.js"></script>
+  	
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  	
+  	
+  	
+	<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+
+  	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+
+  	<script>
+  	    var authDomainOrig = "test-project-311421.firebaseapp.com"
+		var authDomainTest = "www.dawbot.com"
+		var authDomainTest2 = "tracksy.ai"
+		var authDomainTest3 = "auth.tracksy.ai"
+  		var config = {
+    		apiKey: "AIzaSyC7imMwlybVCjMvhwAeeZLcL4LI2fjJo5s",
+    		authDomain: authDomainTest3,
+  		};
+  		firebase.initializeApp(config);
+  	</script>
+ 
+ 
+ 
+
+
+
+
+<!-- start Mixpanel init -->
+
+<script type="text/javascript">
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+
+// Enabling the debug mode flag is useful during implementation,
+// but it's recommended you remove it for production
+mixpanel.init("2073404dbfe82b48fd42bf97321e30f1", {loaded: function(mixpanel){mixpanel_distinct_id=mixpanel.get_distinct_id();}});let mixpanel_distinct_id;
+</script>
+
+<!-- end Mixpanel init -->
+
+
+
+<!-- start Mixpanel Super Properties -->
+<script type="text/javascript">
+
+	mixpanel.register({
+		'Email': 'ec.arbee1@gmail.com',
+		'UserId': 'tyCoLAz3CLd5Trj5ijbsd7HotOG3',
+		'Plan': 'Free'
+	});
+
+
+mixpanel.identify()
+</script>
+<!-- end Mixpanel Super Properties -->
+
+
+	</head>
+	<body>
+	
+  	
+
+
+
+
+
+
+
+
+
+<header class="sticky top-0 shadow-sm !z-max" style="z-index:10000; background-color: rgb(17, 17, 17); color: rgb(255, 255, 255);">
+
+<nav id="navbarApp" class="navbar">
+	<div @click='goToHome' class="brand-title">Tracksy</div>
+	<a href="#" class="toggle-button">
+	<svg viewBox='0 0 10 8' width='40'>
+					  <path d='M1 1h8M1 4h 8M1 7h8' 
+					        stroke='#FFFFFF' 
+					        stroke-width='2' 
+					        stroke-linecap='round'/>
+					</svg>
+	</a>
+	<div v-if="isLoggedIn" class="navbar-links">
+		<ul>
+			<li>
+				<button class="topnav_button" :class="classObject('createtrack')" onclick="location.href='/createtrack'">Create</button>
+			</li>
+			<li>
+				<button class="topnav_button" :class="classObject('library')"  onclick="location.href='/library'">Library</button>
+			</li>
+			<li>
+				<div class="dropdown">
+					<button class="accountButton" onclick="myFunction()" xclass="dropbtn">
+						<span id="accountIcon" class="material-icons">
+							person
+		  				</span>
+	  				</button>
+					
+					  <div id="accountDropdown" class="dropdown-content">
+					  <span class="welcomeMessage">Welcome!&nbsp;&nbsp;{{ userEmail }}</span>
+					    <a href="#" @click='signOut'>Sign Out</a>
+					  </div>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div v-else class="navbar-links">
+		<ul>
+			<li>
+				<button class="topnav_button" onclick="location.href='/signin'">Sign In</button>
+			</li>
+			<li>
+				<button class="topnav_button" onclick="location.href='/signup'">Sign Up</button>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+</header>
+
+<script>
+
+
+
+var navbarApp = new Vue({
+    el: '#navbarApp',
+    data: {
+        isLoggedIn: true,
+        userEmail:'ec.arbee1@gmail.com',
+	    uid: 'tyCoLAz3CLd5Trj5ijbsd7HotOG3',
+	    atk: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMDNhZTdmNDczZjJjNmIyNTI3NmMwNjM2MGViOTk4ODdlMjNhYTkiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRWxpamFoIEFyYmVlIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBY0hUdGUyYkZocWNwTnllZTJYNXl2SUhlUlZINkNQSXFSc2pUZnZxS0VCVms0PXM5Ni1jIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL3Rlc3QtcHJvamVjdC0zMTE0MjEiLCJhdWQiOiJ0ZXN0LXByb2plY3QtMzExNDIxIiwiYXV0aF90aW1lIjoxNjg3NDg5ODQ5LCJ1c2VyX2lkIjoidHlDb0xBejNDTGQ1VHJqNWlqYnNkN0hvdE9HMyIsInN1YiI6InR5Q29MQXozQ0xkNVRyajVpamJzZDdIb3RPRzMiLCJpYXQiOjE2ODc0ODk4NDksImV4cCI6MTY4NzQ5MzQ0OSwiZW1haWwiOiJlYy5hcmJlZTFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDk2OTczMDE1OTU2MTM2ODE2ODMiXSwiZW1haWwiOlsiZWMuYXJiZWUxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.TG29O975Of2GDppnvJ0AFZo4IOZHNZIk1IAr2S27NI923lRUyg2vEtZpv9I06IXQPDM2sSRkZsaEtG87ByUiVbwKIxKd5VneqEpjXcR3YmR3iqESGQyeIhcnFXEvJxdfkwqNhqKJFXc0Y7iCLXKHDIsijFTyG8zaoovCD3t_de5Ma2x7jk7DwLWF6FZ_hx6FYsB9e9IKJ_R21dLZGcW8GNJVB5OAkH_DemQVbiHKz74T9MKsJrvOK3wUfiNLgLMW-jJxOvTvINVvts2TC7a70nzu93Oq5Vdk3SydwxjeF93TRw15bq2mnNLQZauHhJ-NZzLfj2d6hi81Xax6YQAhtQ',
+        windowhref: window.location.href,
+        showMobileMenu: false
+    },
+    methods: {
+    	signOut: function() {
+    		firebase.auth().signOut()
+    		window.location.href = "/processSignout"
+//		     if (typeof homepageApp !== 'undefined') {
+//		    	  homepageApp.isLoggedIn = false;
+//		      }
+    	},
+    	goToHome: function() {
+    		window.location.href = "/"
+    	},
+    	classObject: function(testcheck) {
+    		if (this.windowhref.includes(testcheck)) {
+    			return 'active'
+    		}
+    	},
+        isMobile() {
+    		console.log("In isMobile - screen width - " + window.innerWidth)
+            if( window.innerWidth <= 760 ) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        },
+        showMenu() {
+        	this.showMobileMenu = !this.showMobileMenu;
+        	}
+    },
+    computed: {
+
+    }
+});
+
+$(".toggle-button").on("click", function() {
+	console.log("In toggle button")
+	$(".navbar-links").toggleClass('active')
+});
+
+
+</script>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("accountDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+	console.log(event.target)
+	console.log(event.target.id)
+//  if (!event.target.matches('accountIcon')) {
+	  if (event.target.id != 'accountIcon') {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+$('.button_replace').click(function() {
+	console.log("In button_replace click")
+	document.getElementById("myDropdown").classList.toggle("show");
+})
+
+</script>
+
+	<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 120vh;">
+
+		<p class="header">Your Tracks.</p>
+		
+	  	
+	  	<div id="libraryApp" class="container">
+	  		<table v-if="areThereTracks !== null && areThereTracks" id="mytable" class="table table-striped table-hover">
+	  			<thead>
+	  				<tr>
+		  				<th scope="col">Track</th>
+	  					<th scope="col">Style</th>
+		  				<th scope="col">Duration</th>
+		  				<th scope="col">Date</th>
+	  					<th scope="col">Actions</th>
+	  				</tr>
+	  			</thead>
+	  			<tbody>
+	  				<template v-for="(track,index) in tracks">
+	  				<tr @click="changeTrack" :data-tracklocation="track.fullPath" :data-trackname="track.displayName" :data-trackid="track.trackId" :data-trackindex="index">
+	  					<td>{{ track.displayName }}</td>
+	  					<td>{{ track.style }}</td>
+	  					<td>{{ track.duration }}</td>
+	  					<td>{{ track.createdDate }}</td>
+	  					<td>
+	  						<button id="trackActions" @click.stop="renameTrackStart"  data-bs-toggle="modal" data-bs-target="#renameModal" :data-trackname="track.displayName">
+	  							<span id="trackActionsIco" class="material-icons">
+								    edit
+		  						</span>
+		  					</button>
+	  						<button id="trackActions" @click.stop="shareTrack">
+	  							<span id="trackActionsIco" class="material-icons">
+								    share
+		  						</span>
+		  					</button>
+	  						<button id="trackActions" @click.stop="downloadTrackStart" data-bs-toggle="modal" data-bs-target="#downloadModal" :data-tracklocation="track.fullPath" :data-trackname="track.displayName">
+	  							<span id="trackActionsIco" class="material-icons">
+							    	download
+		  						</span>
+		  					</button>
+		  				</td>
+	  				</tr>
+	  				</template>
+	  			</tbody>
+	  		</table>
+	  		<div v-if="areThereTracks !== null && !areThereTracks" style="text-align:center">
+	  			<h1>You have not yet created any tracks.</h1>
+	  			<br/>
+				<h2>Please click the button below to create some tracks.</h2>
+				<br/>
+				<button class="buttoncreate" onclick="location.href='/createtrack'">Create Track</button>
+	  		</div>
+	  	</div>
+	  	
+	    <div class="card-body text-center" id="wpdm-audio-player">
+    
+    <div id="discardSaveButtons" class="discardSaveButtons">
+    	<button id="discardTrack">Discard</button>
+    	<button id="saveTrack">Save</button>
+    </div>
+     <div class="media">
+
+		<div id="aWrap">
+			
+			<div class="audioplayertitle">
+				<h5 id="audioplayerTrackDisplayName" class="trackName"></h5>
+			</div>
+			
+			<div class="audioplayercontrols">
+				  <!-- (B) PLAY/PAUSE BUTTON -->
+				  <div>
+				  <button id="aPrev">
+				  	<span id="aPrevIco" class="material-icons">
+				    	skip_previous
+				  	</span>
+				  </button>
+				  <button id="aPlay">
+				  	<span id="aPlayIco" class="material-icons">
+				    	play_arrow
+				  	</span>
+				  </button>
+				  <button id="aNext">
+				  	<span id="aNextIco" class="material-icons">
+				    	skip_next
+				  	</span>
+				  </button>
+				 </div>
+				  <!-- (C) TIME -->
+				 
+				  <!-- (D) SEEK BAR -->
+
+				 	<span id="aNow"></span><input id="aSeek" xclass="roundedInputText" type="range" min="0" value="0" step="1"/><span id="aTime"></span>
+			</div>
+			
+			<div class="audioplayervolume">
+			  <!-- (E) VOLUME SLIDE -->
+			  <span id="aVolIco" class="material-icons">volume_up</span>
+			  <input id="aVolume" type="range" min="0" max="1" value="0.3" step="0.1"/>
+			</div>		
+		</div>
+
+      </div>
+    </div>
+
+
+
+	  			<div class="footer">
+			<div class="footer_2">
+				<div class="footer_2_main">
+					<div>© 2023 Tracksy | Worlds Leading AI Music Generator</div>
+					<div><a class="contactlink" href="/termsofuse">Terms of Use</a>  |  Please contact us at <a href="mailto:hello@tracksy.ai" class="contactLink">hello@tracksy.ai</a></div>
+				</div>
+			</div>
+		</div>
+    
+</div>
+
+
+
+
+	<script>
+	
+	function startSpecificPage() {
+		$('#createButton').show();
+	}
+	
+	// Get the modal
+	var modal = document.getElementById("myModal");
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+
+	function startSpecificPage() {
+		//libraryApp.isLoggedIn = true;
+		//libraryApp.getTracks()
+	}
+
+	$('#mytable').on('click', 'tbody tr', function(event) {
+	    $(this).addClass('highlight').siblings().removeClass('highlight');
+	});
+	
+	$('#renameModal').on('show.bs.modal', function (event) {
+		alert("In this modal")
+		  var button = $(event.relatedTarget) // Button that triggered the modal
+		  var recipient = button.data('trackName') // Extract info from data-* attributes
+		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		  var modal = $(this)
+		  modal.find('.modal-body input').val(recipient)
+		})
+	
+	</script>
+	
+	
+	
+	<script>
+
+		var libraryApp = new Vue({
+    		el: '#libraryApp',
+    		data: {
+        		isLoggedIn: true,
+        		areThereTracks: true,
+        		tracks: [{"fullPath":"https://storage.googleapis.com/mmeans_dawbot_tracks/b485a8f0-f328-4e48-9462-9c6defd3e7b8.mp3","duration":"135","createdDate":"06-23-2023","discardFlag":0,"displayName":"New Track","trackId":"b485a8f0-f328-4e48-9462-9c6defd3e7b8","style":"Moods: Dreamy","category":"Moods","group":"Dreamy"},{"fullPath":"https://storage.googleapis.com/mmeans_dawbot_tracks/0dcc82a5-5cf6-452f-8c4d-fd8c79639c32.mp3","duration":"180","createdDate":"06-23-2023","discardFlag":0,"displayName":"New Track","trackId":"0dcc82a5-5cf6-452f-8c4d-fd8c79639c32","style":"Moods: Energizing","category":"Moods","group":"Energizing"}],
+        		selectedtrack: '',
+        		selectedTrackName: '',
+        		selectedTrackNewName: '',
+        		selectedTrackId: '',
+        		selectedTrackIndex: ''
+    		},
+    		methods: {
+    			signOut: function() {
+    				firebase.auth().signOut()
+    			},
+    			getTracks: function() {
+    		        $.ajax({
+    		            type: "POST",
+    		            url: "/api/gettracks",
+    		            data: JSON.stringify({uid: navbarApp.uid, atk: navbarApp.atk}),
+    		            success: function(result) {
+    		          	  console.log(result.tracks)
+    		          	  console.log(result.tracks.length)
+    		          	  libraryApp.tracks = result.tracks
+    		          	  if (result.tracks.length > 0) {
+    		          		  libraryApp.areThereTracks = true;
+    		          	  } else {
+    		          		libraryApp.areThereTracks = false;
+    		          	  }
+    		            },
+    		            error: function(result) {
+    		          	  $('#player').hide()
+    		          	  $('#errorOnCreate').show()
+    		          	  $('#myModal').hide();
+    		            }
+    		          });
+
+    			},
+    			changeTrack: function() {
+    				
+					$('#mytable tr').removeClass('highlight')
+					event.currentTarget.className += " highlight";
+					
+    				const trackURL = event.currentTarget.getAttribute("data-tracklocation")
+    				console.log("In library - trackURL - " + trackURL)
+    				const trackName = event.currentTarget.getAttribute("data-trackname")
+    				console.log("In library - trackName - " + trackName)
+    				const trackIndex = event.currentTarget.getAttribute("data-trackindex")
+    				console.log("In library - trackIndex - " + trackIndex)
+    				this.selectedTrackIndex = trackIndex;
+    				
+//    				$("#trackName").text(trackName)
+//    			    var audio = $("#player");      
+//    			    $("#mp3_src").attr("src", trackURL);
+    			    /****************/
+//    			    audio[0].pause();
+//    			    audio[0].load();//suspends and restores all audio element
+
+    			    //audio[0].play(); changed based on Sprachprofi's comment below
+//    			    audio[0].oncanplaythrough = audio[0].play();
+    			    /****************/
+    		        $('#myModal').hide();
+//    			    audio.show()
+    				changeAudioTrack(trackURL, trackName)
+
+    			},
+    			prevNextTrack: function(direction) {
+    				if (this.tracks.length < 2) {
+    					return
+    				}
+					$('#mytable tr').removeClass('highlight')
+    				var selectedTrackIndex = this.selectedTrackIndex
+    				if (direction == 'prev') {
+    					selectedTrackIndex--
+    				} else {
+        				selectedTrackIndex++;
+    				}
+					if ((selectedTrackIndex + 1) > this.tracks.length) {
+						selectedTrackIndex = 0
+					}
+					if (selectedTrackIndex < 0) {
+						selectedTrackIndex = this.tracks.length - 1
+					}
+    				const track = this.tracks[selectedTrackIndex]
+    				this.selectedTrackIndex = selectedTrackIndex
+    				const newRow = $("#mytable").find("[data-trackindex='" + selectedTrackIndex + "']");
+    				console.log(newRow)
+    				newRow.addClass('highlight')
+    				changeAudioTrack(track.fullPath, track.displayName)
+    			},
+    			shareTrack: function() {
+    				const trackId = event.currentTarget.parentNode.parentNode.getAttribute("data-trackid")
+    				const windowhref = window.location.href
+    				let domain = (new URL(windowhref));
+    				console.log(domain.protocol)
+    				var fullURL = domain.protocol + "//" + domain.hostname
+    				if (domain.hostname.includes("localhost")) {
+    					fullURL = fullURL + ":" + domain.port
+    				}
+    				fullURL = fullURL + "/shared.jsp?trackid=" + trackId
+//    				console.log(fullURL)
+    				navigator.clipboard.writeText(fullURL);	
+    		        mixpanel.track('Share Track', {
+      		  		  'Link': fullURL
+      		  		});
+
+    				$.toast({
+    				    heading: 'Information',
+    				    text: 'Copying Shared URL to clipboard',
+    				    icon: 'info',
+    				    loader: true,        // Change it to false to disable loader
+    				    loaderBg: '#9EC600'  // To change the background
+    				})
+    			},
+    			renameTrackStart: function() {
+    				const trackName = event.currentTarget.getAttribute("data-trackname")
+    				this.selectedTrackName = trackName;
+    				const trackId = event.currentTarget.parentNode.parentNode.getAttribute("data-trackid")
+    				this.selectedTrackId = trackId;
+    				console.log("trackName - " + trackName)
+    				console.log("trackId - " + trackId)
+
+    				$('#renameModal').find('input').val(trackName)
+    				$('#renameModal').show()
+    			},
+    			renameTrack: function() {
+    				const newTrackName = $('#renameModal').find('#track-name').val()
+    				this.selectedTrackNewName = newTrackName;
+    		        mixpanel.track('Rename Track', {
+    		  		  'Old Name': libraryApp.selectedTrackName,
+    		  		  'New Name': libraryApp.selectedTrackNewName,
+    		  		  'Track ID': libraryApp.selectedTrackId
+    		  		});
+
+    		        $.ajax({
+    		            type: "POST",
+    		            url: "/api/renametrack.jsp",
+    		            data: JSON.stringify({uid: navbarApp.uid, atk: navbarApp.atk, trackId: libraryApp.selectedTrackId, trackName: libraryApp.selectedTrackNewName}),
+    		            success: function(result) {
+    		          	  console.log(result)
+    		          	  location.reload()
+    		            },
+    		            error: function(result) {
+    		          	  $('#player').hide()
+    		          	  $('#errorOnCreate').show()
+    		          	  $('#myModal').hide();
+    		            }
+    		          });
+
+    			},
+
+    			downloadTrackStart: function() {
+    				const trackName = event.currentTarget.getAttribute("data-trackname")
+    				this.selectedTrackName = trackName;
+    				const trackId = event.currentTarget.parentNode.parentNode.getAttribute("data-trackid")
+    				this.selectedTrackId = trackId;
+    				const trackURL = event.currentTarget.getAttribute("data-tracklocation")
+    				this.selectedTrackURL = trackURL;
+    				$('#downloadModal').modal('show');
+    			},
+    			downloadTrack: function() {
+    				const trackId = libraryApp.selectedTrackId
+    				console.log("trackId - " + trackId)
+    				window.location.href = "/filedownloadservlet?trackid=" + trackId + "&tracktype=create";
+    		        mixpanel.track('Download Track', {
+      		  		  'Track ID': libraryApp.selectedTrackId,
+      		  		  'Track Type': 'Create'
+      		  		});
+
+    				$('#downloadModal').modal('hide');
+
+    			}    		
+    		
+    		}
+		});
+		
+		
+		function submitRenameTrack() {
+			libraryApp.renameTrack()
+		}
+		
+		function copyLicenseInfo() {
+			let licenseText = "Music Co-created with Tracksy.ai.  https://tracksy.ai"
+			navigator.clipboard.writeText(licenseText);
+		}
+		
+		function submitDownloadTrack() {
+			libraryApp.downloadTrack()
+		}
+		
+		function toggleDownloadButton() {
+		      var checkbox = document.getElementById('downloadrights');
+		      var button = document.getElementById('downloadButton');
+		
+		      if (checkbox.checked) {
+		        button.disabled = false;
+		      } else {
+		        button.disabled = true;
+		      }
+	    }
+
+
+	</script>
+	
+	
+<!-- Rename Track Modal -->
+
+
+<div class="modal" id="renameModal" tabindex="-1" role="dialog" aria-labelledby="renameModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="renameModalLabel">Rename Track</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="track-name" class="col-form-label">Track Name:</label>
+            <input type="text" class="form-control" id="track-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="submitRenameTrack()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+
+<!-- Download Track Modal -->
+
+<div class="modal" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="downloadModalLabel">Tracksy Lite License</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align:center">
+      In order to use this track you must copy and paste the link shown below in to the description of your YouTube video, social post, podcast, etc to show that you co-created the music with Tracksy.
+		<br/><br/>
+		By clicking the download button you agree to these terms.
+		<br/><br/>
+		<div class="modalRowBox">
+			<div id="licenseTextToCopy" style="display:block; float:left; width:80%">
+				Music Co-created with Tracksy.ai 
+				<br/>
+				https://tracksy.ai
+			</div>
+			<div style="display:block; float:left; width:20%; padding-top:3%">
+				<button id="trackActions" onclick="copyLicenseInfo()"">
+					<span id="trackActionsIco" class="material-icons" >filter_none</span>
+				</button>
+			</div>
+		
+      	</div>
+      </div>
+      <div class="download-rights">
+		<label for="downloadrights" id="downloadrightsLabel" xclass="ml-3 text-sm font-medium text-gray-700">
+		<input id="downloadrights" type="checkbox" onclick="toggleDownloadButton()">
+			<span>By checking this box I agree that I must use the downloaded track in accordance to the <a href="/termsofuse" target="new">Terms of Use</a></span>
+		</label>
+	  </div>
+      <div class="modal-body" style="text-align:center">
+        <button id="downloadButton" type="button" class="btn btn-primary" disabled onclick="submitDownloadTrack()">Download</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+
+
+
+</html>
