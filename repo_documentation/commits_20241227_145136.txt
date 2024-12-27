@@ -1,0 +1,5 @@
+Commit History as of 20241227_145136:
+a9bdb78 - ebowwa, 43 minutes ago : refactor: set up monorepo with submodules
+23bddda - ebowwa, 49 minutes ago : refactor: set up monorepo with submodules
+1172d53 - ebowwa, 50 minutes ago : refactor: convert embedded repositories to submodules
+44b4a58 - ebowwa, 52 minutes ago :  BREAKING CHANGE!  Dependencies:  Config:  Security: Enhanced security measures.
